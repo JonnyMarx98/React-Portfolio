@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inner: {
     backgroundColor: "#dae1e4",
-    height: "200px",
+    height: "400px",
     width: "100%",
     borderRadius: "5px",
     overflow: "hidden",
@@ -28,9 +28,11 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     width: "100%",
-    height: "75%"
-    // maxHeight: "100%"
-    // display: "block"
+    height: "80%",
+    paddingBottom: "1rem"
+  },
+  title: {
+
   }
 }));
 
@@ -44,7 +46,7 @@ export default function PortfolioItem({img, title, url}) {
         <a className={classes.imgContainer} href={url}>
           <img className={classes.img} src={img} alt={title} />
         </a>
-        {title}
+        <span className={classes.title}>{title}</span>
       </div>
     </div>
   )

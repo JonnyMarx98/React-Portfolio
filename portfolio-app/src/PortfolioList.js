@@ -8,20 +8,21 @@ import PokemonImage from './imgs/PokemonApp.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    paddingTop: "2rem",
     height: "100vh",
     display: "flex",
     alignItems: "flex-start",
     justifyContent: "center",
-    backgroundColor: '#097ddb',
+    backgroundColor: '#b7b7b7',
     overflow: "scroll"
     /* background by SVGBackgrounds.com */
   },
   container: {
-    width: "50%",
+    width: "70%",
     display: "flex",
     alignItems: "flex-start",
     flexDirection: "column",
-    // flexWrap: "nowrap",
+    flexWrap: "nowrap",
     [sizes.down("xl")]: {
       width: "80%"
     },

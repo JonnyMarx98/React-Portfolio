@@ -21,25 +21,30 @@ const useStyles = makeStyles((theme) => ({
     height: "200px",
     width: "100%",
     borderRadius: "5px",
-    overflow: "hidden"
+    overflow: "hidden",
+    textAlign: "center",
+    fontSize: "1.4rem",
+    fontWeight: "400"
   },
   img: {
-    maxWidth: "100%",
-    maxHeight: "100%",
-    display: "block"
+    width: "100%",
+    height: "75%"
+    // maxHeight: "100%"
+    // display: "block"
   }
 }));
 
-export default function PortfolioItem() {
+export default function PortfolioItem({img, title, url}) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <div className={classes.inner}>
-        React Colours App
-        <a className={classes.imgContainer} href="https://jonnymarx98.github.io/React-colour-app/">
-          <img className={classes.img} src={ColoursAppImage} alt="colour app image" />
+      
+        <a className={classes.imgContainer} href={url}>
+          <img className={classes.img} src={img} alt={title} />
         </a>
+        {title}
       </div>
     </div>
   )

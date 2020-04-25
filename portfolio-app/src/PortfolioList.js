@@ -2,6 +2,9 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import PortfolioItem from './PortfolioItem';
 import sizes from './sizes';
+import ColoursAppImage from './imgs/ColoursApp.png';
+import GameDevImage from './imgs/GameDev.png';
+import PokemonImage from './imgs/PokemonApp.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,10 +52,9 @@ export default function PortfolioList() {
     <div className={classes.root}>
       <div className={classes.container}>
         <div className={classes.items}>
-          <PortfolioItem/>
-          <PortfolioItem/>
-          <PortfolioItem/>
-          <PortfolioItem/>
+          <PortfolioItem img={GameDevImage} title="Game Dev Portfolio" url="https://jonnymarx98.github.io/#portfolio"/>
+          <PortfolioItem img={ColoursAppImage} title="React Colours App" url="https://jonnymarx98.github.io/React-colour-app/" />
+          <PortfolioItem img={PokemonImage} title="React Pokemon App" url="https://jonnymarx98.github.io/React-Bootcamp/" />
         </div>
         
       </div>
